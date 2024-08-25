@@ -1,7 +1,7 @@
 {
   "name": "@fregante/relaxed-json",
   "description": "Relaxed JSON is strict superset JSON, relaxing strictness of valilla JSON",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "homepage": "https://github.com/fregante/relaxed-json",
   "author": {
     "name": "Oleg Grenrus",
