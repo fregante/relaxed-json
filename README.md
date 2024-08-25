@@ -1,10 +1,24 @@
+# Fork of [Relaxed JSON](https://github.com/phadej/relaxed-json/fork) without CLI
+
+```sh
+npm install @fregante/relaxed-json
+```
+
+```js
+const RJSON = require('@fregante/relaxed-json');
+RJSON.transform('{ "foo": "bar" }');
+// => '{"foo":"bar"}'
+
+RJSON.parse('{ "foo": "bar" }');
+// => { foo: 'bar' }
+
+RJSON.stringify({ foo: 'bar' });
+// => '{"foo":"bar"}'
+```
+
 # Relaxed JSON
 
-[![Build Status](https://secure.travis-ci.org/phadej/relaxed-json.svg?branch=master)](http://travis-ci.org/phadej/relaxed-json)
 [![NPM version](https://badge.fury.io/js/relaxed-json.svg)](http://badge.fury.io/js/relaxed-json)
-[![Dependency Status](https://david-dm.org/phadej/relaxed-json.svg)](https://david-dm.org/phadej/relaxed-json)
-[![devDependency Status](https://david-dm.org/phadej/relaxed-json/dev-status.svg)](https://david-dm.org/phadej/relaxed-json#info=devDependencies)
-[![Code Climate](https://img.shields.io/codeclimate/github/phadej/relaxed-json.svg)](https://codeclimate.com/github/phadej/relaxed-json)
 
 Are you frustrated that you cannot add comments into your configuration JSON
 Relaxed JSON is a simple solution.
@@ -36,31 +50,13 @@ features helping writing JSON by hand.
   - `tolerant`: wait until the end to throw errors
   - `duplicate`: fail if there are duplicate keys in objects
 
-## Executable
-
-There is `rjson` executable<sup>&dagger;</sup>
-
-```sh
-$ sudo npm install -g relaxed-json
-
-$ rjson relaxed-json.js
-Error on line 27: Unexpected character: (
-(function () {
-
-% rjson package.json
-{
-  "name": "relaxed-json",
-  "description": "Relaxed JSON is strict superset JSON, relaxing strictness of valilla JSON",
-```
-
-<sup>&dagger;</sup>`rjson` is similar to `python -mjson.tool`.
-
 ## Changelog
 
+- 2.0.0 &mdash; 2024-08-25 &mdash; Dropped CLI
 - 1.0.1 &mdash; 2017-03-08 &mdash; Meteor compatibility
-  - [#9](https://github.com/phadej/relaxed-json/issues/9)
-    [#14](https://github.com/phadej/relaxed-json/pull/14)
-    [#15](https://github.com/phadej/relaxed-json/pull/15)
+  - [#9](https://github.com/fregante/relaxed-json/issues/9)
+    [#14](https://github.com/fregante/relaxed-json/pull/14)
+    [#15](https://github.com/fregante/relaxed-json/pull/15)
 - 1.0.0 &mdash; 2015-07-13 &mdash; Stable release
   - Forward slashes bug fixed
 - 0.2.9 Dependencies bump
